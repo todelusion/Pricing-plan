@@ -1,15 +1,18 @@
 <template>
 
-    <body class="bg-[#F5F5F5] min-h-screen">
+    <body class="bg-[#F5F5F5] min-h-screen relative">
         <div class="pt-5 px-16 lg:p-8">
+            <!-- header -->
             <div class="flex justify-between items-start lg:max-w-[1280px] lg:mx-auto">
                 <div class="border-gray-500">
                     <h1 class="text-4xl text-gray-800 tracking-wide">Start now</h1>
                     <p class="text-4xl text-gray-800 tracking-wide">your <span class="font-bold">free plan</span></p>
                 </div>
-                <button
+                <button @click="toggleShowModal"
                     class="bg-primary text-white py-2 px-4 tracking-widest rounded-sm ring-primary ring-offset-2 active:ring-2 duration-100">LOGIN</button>
             </div>
+
+            <!-- main -->
             <div class="lg:grid lg:grid-cols-3 lg:justify-evenly lg:gap-8 lg:max-w-[1280px] lg:mx-auto">
                 <div class="w-full p-8 mt-16 bg-secondary rounded-2xl hover:scale-105 duration-150 shadow-2xl">
                     <p class="text-3xl font-bold">Free $0 <span class="text-base text-gray-600 font-medium">per
@@ -63,30 +66,31 @@
                         class="w-full bg-primary py-3 text-white rounded-lg tracking-wider text-lg">subscribe</button>
                 </div>
             </div>
+
+            <!-- modal -->
+            <Modal v-show="showModal" @close="toggleShowModal"/>
+
+
         </div>
     </body>
 </template>
 
 <script>
     import Clist from './Clist.vue'
+    import Modal from './Modal.vue'
     export default {
-        data() {
-            return {
-                lists: [{
-                        title: 'list1'
-                    },
-                    {
-                        title: 'list2'
-                    },
-                    {
-                        title: 'list3'
-                    }
-                ]
+        data(){
+            return{
+                showModal: true
             }
-
         },
+        methods: {
+        toggleShowModal(){
+            this.showModal = !this.showModal
+        }
+    },
         components: {
-            Clist
+            Clist,Modal
         }
     }
 </script>

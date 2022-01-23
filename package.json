@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "cross-env TAILWIND_MODE=watch vue-cli-service serve",
-    "build": "cross-env TAILWIND_MODE=build vue-cli-service build"
+    "build": "cross-env TAILWIND_MODE=build vue-cli-service build --no-clean"
   },
   "dependencies": {
     "@tailwindcss/postcss7-compat": "^2.2.17",

@@ -20,7 +20,7 @@
                     <div class="w-[30px] h-[3px] bg-primary mt-4"></div>
                     <p class="mt-8 font-bold text-lg">Plan includes:</p>
 
-                    <!-- 嘗試使用v-for -->
+                    <!--v-for -->
                     <ul id="list1" class="text-lg mb-20">
                         <Clist />
                         <Clist />
@@ -37,7 +37,7 @@
                     <div class="w-[30px] h-[3px] bg-white mt-4"></div>
                     <p class="mt-8 font-bold text-lg">Plan includes:</p>
 
-                    <!-- 嘗試使用v-for -->
+                    <!--v-for -->
                     <ul id="list1" class="text-lg mb-20">
                         <Clist color="text-white" />
                         <Clist color="text-white" />
@@ -54,7 +54,7 @@
                     <div class="w-[30px] h-[3px] bg-primary mt-4"></div>
                     <p class="mt-8 font-bold text-lg">Plan includes:</p>
 
-                    <!-- 嘗試使用v-for -->
+                    <!--v-for -->
                     <ul id="list1" class="text-lg mb-20">
                         <Clist />
                         <Clist />
